@@ -7,7 +7,7 @@ export default class Carosuel extends Component {
         return (
             <div>
                 <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
-                    <div className="carousel-inner my-1">
+                    <div className="carousel-inner my-0.5">
                         <div className="carousel-item active carousel-image ">
                             <img src={pic1} className="d-block w-100 h-100" alt="..." />
                         </div>
