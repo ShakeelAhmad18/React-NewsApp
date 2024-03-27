@@ -16,7 +16,7 @@ export default class App extends Component {
       <div>
         <Router>
           <Navbar />
-          <Carosuel />
+          <Carosuel/>
           <Routes>
             <Route exact path="/general" element={<News key='general' pageSize={6} country='us' category='general'/>}></Route>
             <Route exact path="/sports" element={<News key='sports' pageSize={6} country='us' category='sports'/>}></Route>
