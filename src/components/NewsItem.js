@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 export default class NewsItem extends Component {
   render() {
     let { title, description, imageurl, newsurl, author, date, source } = this.props;
@@ -12,7 +11,7 @@ export default class NewsItem extends Component {
             <h5 className="card-title">{title}...</h5>
             <p className="card-text">{description}...</p>
             <p>By {!author ? 'Unknown' : author} on {new Date(date).toGMTString()}</p>
-            <a rel="noreferrer" href={newsurl} target='_blank' className="btn btn-sm btn-dark">Read More</a>
+            <a rel="noreferrer" href={newsurl}  target='_blank' className="btn btn-sm btn-dark">Read More</a>
           </div>
         </div>
       </div>

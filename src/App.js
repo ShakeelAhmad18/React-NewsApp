@@ -18,6 +18,7 @@ export default class App extends Component {
           <Navbar />
           <Carosuel/>
           <Routes>
+          <Route exact path="/" element={<News key='general' pageSize={6} country='us' category='general'/>}></Route>
             <Route exact path="/general" element={<News key='general' pageSize={6} country='us' category='general'/>}></Route>
             <Route exact path="/sports" element={<News key='sports' pageSize={6} country='us' category='sports'/>}></Route>
             <Route exact path="/technology" element={<News key='technology' pageSize={6} country='us' category='technology'/>}></Route>
