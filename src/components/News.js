@@ -29,16 +29,19 @@ export class News extends Component {
     document.title=`${this.Capitalizefunction(this.props.category)} - NewsCastle`
   }
   async UpdateNews(){
-    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=fcd4d243d74540a3a484645d5e252d77&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    this.props.setProgress(30)
+    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apikey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     this.setState({loading:true})
     let data = await fetch(url)
+    this.props.setProgress(30)
     let parsedata = await data.json()
-    console.log(parsedata)
+    this.props.setProgress(70)
     this.setState({
       articles: parsedata.articles,
       totalResults: parsedata.totalResults,
       loading:false
     })
+    this.props.setProgress(100)
   }
   async componentDidMount() {
     this.UpdateNews()
